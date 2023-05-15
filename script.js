@@ -1,18 +1,18 @@
 "use strict";
 
-const dailyBtn = document.getElementById('daily-btn')
-const weeklyBtn = document.getElementById('weekly-btn')
-const monthlyBtn = document.getElementById('monthly-btn')
+const dailyBtn = document.getElementById("daily-btn");
+const weeklyBtn = document.getElementById("weekly-btn");
+const monthlyBtn = document.getElementById("monthly-btn");
 
-const dailyArr = document.querySelectorAll('daily')
-const weeklyArr = document.querySelectorAll('weekly')
-const monthlyArr = document.querySelectorAll('monthly')
+const dailyArr = document.querySelectorAll(".daily");
+const weeklyArr = document.querySelectorAll(".weekly");
+const monthlyArr = document.querySelectorAll(".monthly");
 
-dailyBtn.addEventListener('click', () => {
+dailyBtn.addEventListener("click", () => {
    dailyArr.forEach((arr) => {
-      arr.classList.add('active');
+      arr.classList.add("active");
    });
-
+   
    weeklyArr.forEach((arr) => {
       arr.classList.remove('active');
    });
@@ -33,7 +33,7 @@ weeklyBtn.addEventListener('click', () => {
    dailyArr.forEach((arr) => {
      arr.classList.remove('active');
    });
-
+   
    monthlyArr.forEach((arr) => {
       arr.classList.remove('active');
    });
@@ -55,8 +55,6 @@ monthlyBtn.addEventListener('click', () => {
      arr.classList.remove('active');
    });
    monthlyBtn.style.color = "hsl(236, 100%, 87%)";
-   dailyBtn.style.color = "";
    weeklyBtn.style.color = "hsl(235, 45%, 61%)";
+   dailyBtn.style.color = "";
 });
-
-
